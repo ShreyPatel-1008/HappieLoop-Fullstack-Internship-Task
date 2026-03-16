@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your shopping cart at ShopVerse. Review items and proceed to checkout.">
+  <title>Cart — ShopVerse</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="logo-icon">🛒</span>
+        <span>ShopVerse</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/products.html" class="nav-link">Products</a></li>
+        <li><a href="/cart.html" class="nav-link active cart-link">Cart <span class="cart-badge" id="cartBadge">0</span></a></li>
+        <li><a href="/orders.html" class="nav-link">Orders</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1>Shopping Cart</h1>
+    <p id="cartCount">0 items in your cart</p>
+  </div>
+
+  <!-- Cart Content -->
+  <div class="cart-container">
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-summary" id="cartSummary" style="display:none;">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="subtotal">₹0</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Shipping</span>
+        <span style="color: var(--success); font-weight: 600;">FREE</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Total</span>
+        <span id="totalPrice">₹0</span>
+      </div>
+      <a href="/checkout.html" class="btn btn-primary btn-lg">Proceed to Checkout →</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">🛒 ShopVerse</div>
+      <p>Your premium destination for quality products.</p>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/products.html">Products</a>
+        <a href="/cart.html">Cart</a>
+        <a href="/orders.html">Orders</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <span class="toast-icon" id="toastIcon">✓</span>
+    <span id="toastMessage"></span>
+  </div>
+
+  <script src="js/cart.js"></script>
+</body>
+</html>

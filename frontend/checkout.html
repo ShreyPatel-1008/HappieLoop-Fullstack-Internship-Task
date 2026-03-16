@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Checkout — Complete your order at ShopVerse.">
+  <title>Checkout — ShopVerse</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="logo-icon">🛒</span>
+        <span>ShopVerse</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/products.html" class="nav-link">Products</a></li>
+        <li><a href="/cart.html" class="nav-link cart-link">Cart <span class="cart-badge" id="cartBadge">0</span></a></li>
+        <li><a href="/orders.html" class="nav-link">Orders</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1>Checkout</h1>
+    <p>Complete your order details below</p>
+  </div>
+
+  <!-- Checkout Content -->
+  <div class="checkout-container container">
+    <!-- Shipping Form -->
+    <div class="checkout-form-card">
+      <h2>📦 Shipping Details</h2>
+      <form id="checkoutForm">
+        <div class="form-group" id="nameGroup">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" placeholder="Enter your full name" required>
+          <span class="error-msg">Please enter your full name</span>
+        </div>
+        <div class="form-group" id="addressGroup">
+          <label for="address">Shipping Address</label>
+          <textarea id="address" placeholder="Enter your complete shipping address" required></textarea>
+          <span class="error-msg">Please enter your shipping address</span>
+        </div>
+        <div class="form-group" id="phoneGroup">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Enter your phone number" required>
+          <span class="error-msg">Please enter a valid phone number</span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%; margin-top: 8px;" id="placeOrderBtn">
+          🛍️ Place Order
+        </button>
+      </form>
+    </div>
+
+    <!-- Order Summary -->
+    <div class="checkout-summary-card">
+      <h2>🧾 Order Summary</h2>
+      <div class="order-summary-items" id="summaryItems"></div>
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="summarySubtotal">₹0</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Shipping</span>
+        <span style="color: var(--success); font-weight: 600;">FREE</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Total</span>
+        <span id="summaryTotal">₹0</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">🛒 ShopVerse</div>
+      <p>Your premium destination for quality products.</p>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/products.html">Products</a>
+        <a href="/cart.html">Cart</a>
+        <a href="/orders.html">Orders</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <span class="toast-icon" id="toastIcon">✓</span>
+    <span id="toastMessage"></span>
+  </div>
+
+  <script src="js/checkout.js"></script>
+</body>
+</html>
