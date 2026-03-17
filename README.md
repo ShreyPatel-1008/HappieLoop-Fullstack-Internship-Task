@@ -1,103 +1,103 @@
-# 🛒 ShopVerse — E-Commerce Store
+# ShopVerse — Luxury E‑Commerce UI + Fullstack
 
-A complete, fully functional e-commerce website built from scratch.
+Premium, editorial, timeless e‑commerce experience built with **pure HTML/CSS/vanilla JS** on the frontend and a **Node/Express + MongoDB** backend.
 
-## 🧱 Tech Stack
+## Highlights
 
-- **Frontend:** HTML, CSS, Vanilla JavaScript
-- **Backend:** Node.js + Express.js
-- **Database:** MongoDB (Mongoose ODM)
-- **Styling:** Custom CSS (modern, mobile-responsive)
+- **Luxury landing page UI**: full‑viewport cinematic hero, staggered entrance text, particle field + floating orbs, mouse‑reactive accent, scroll indicator
+- **Editorial dark theme**: deep blacks/navy with **metallic gold** accents, serif headings + clean sans body
+- **Scroll‑trigger reveal animations** on sections and cards
+- **E‑commerce flow**: products → cart → checkout → confirmation → orders
+- **Filtering/search**: name/category/price
+- **UX polish**: micro‑interactions, toasts, spinners, empty states, responsive layout
 
-## 📁 Project Structure
+## Tech Stack
 
-```
+- **Frontend**: HTML, CSS, Vanilla JavaScript (no frameworks)
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB + Mongoose
+
+## Project Structure
+
+```text
 ecommerce/
 ├── frontend/
-│   ├── index.html          # Home page
-│   ├── products.html       # Product listing
-│   ├── cart.html            # Shopping cart
-│   ├── checkout.html        # Checkout form
-│   ├── confirmation.html    # Order confirmation
-│   ├── orders.html          # Order history
-│   ├── css/
-│   │   └── style.css        # All styles
+│   ├── index.html
+│   ├── products.html
+│   ├── cart.html
+│   ├── checkout.html
+│   ├── confirmation.html
+│   ├── orders.html
+│   ├── css/style.css
 │   └── js/
-│       ├── products.js      # Products page logic
-│       ├── cart.js           # Cart page logic
-│       ├── checkout.js       # Checkout logic
-│       └── orders.js         # Order history logic
+│       ├── products.js
+│       ├── cart.js
+│       ├── checkout.js
+│       └── orders.js
 ├── backend/
-│   ├── server.js            # Express server
+│   ├── server.js
 │   ├── routes/
-│   │   ├── products.js      # Product API routes
-│   │   ├── cart.js           # Cart API routes
-│   │   └── orders.js         # Order API routes
 │   ├── models/
-│   │   ├── Product.js       # Product schema
-│   │   ├── Cart.js          # Cart schema
-│   │   └── Order.js          # Order schema
-│   └── data/
-│       └── seed.js           # Database seeder
-├── .env                     # Environment variables
+│   └── data/seed.js
 ├── package.json
 └── README.md
 ```
 
-## 🚀 Setup Instructions
+## Getting Started (Local)
 
 ### Prerequisites
-- Node.js (v16+)
-- MongoDB running locally on port 27017
 
-### Steps
+- Node.js (recommended: 18+)
+- MongoDB running locally or a MongoDB Atlas connection string
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+### 1) Install dependencies
 
-2. **Seed the database with sample products:**
-   ```bash
-   node backend/data/seed.js
-   ```
+```bash
+npm install
+```
 
-3. **Start the server:**
-   ```bash
-   node backend/server.js
-   ```
+### 2) Configure environment variables
 
-4. **Open in browser:**
-   ```
-   http://localhost:3000
-   ```
+Create a `.env` file in the project root:
 
-## 🔌 API Endpoints
+```bash
+MONGODB_URI=mongodb://127.0.0.1:27017/shopverse
+PORT=3000
+```
 
-| Method | Endpoint            | Description              |
-|--------|---------------------|--------------------------|
-| GET    | /api/products       | Get all products         |
-| GET    | /api/product/:id    | Get single product       |
-| GET    | /api/categories     | Get all categories       |
-| POST   | /api/cart           | Add product to cart      |
-| DELETE | /api/cart/:id       | Remove from cart         |
-| POST   | /api/order          | Place a new order        |
-| GET    | /api/orders/:userId | Get order history        |
+If your `backend/server.js` uses a different variable name (e.g. `MONGO_URI`), set that instead.
 
-## 📦 Sample Products
+### 3) Seed sample products
 
-The seeder includes 8 products across 3 categories:
-- **Electronics:** iPhone 15 Pro, Sony WH-1000XM5, Samsung Galaxy Watch 6
-- **Clothing:** Premium Cotton T-Shirt, Classic Denim Jacket, Nike Air Max
-- **Books:** The Psychology of Money, Atomic Habits
+```bash
+npm run seed
+```
 
-## ✨ Features
+### 4) Run the app
 
-- Responsive design (mobile, tablet, desktop)
-- Product search and filtering (by name, category, price range)
-- LocalStorage-based cart with real-time badge updates
-- Toast notifications on actions
-- Form validation on checkout
-- Order history with status badges
-- Loading spinners and empty states
-- Smooth animations and hover effects
+```bash
+npm run dev
+```
+
+Then open:
+
+```text
+http://localhost:3000
+```
+
+## API Endpoints (Backend)
+
+| Method | Endpoint            | Description          |
+|--------|---------------------|----------------------|
+| GET    | /api/products       | List products        |
+| GET    | /api/product/:id    | Single product       |
+| GET    | /api/categories     | List categories      |
+| POST   | /api/cart           | Add to cart          |
+| DELETE | /api/cart/:id       | Remove from cart     |
+| POST   | /api/order          | Create order         |
+| GET    | /api/orders/:userId | Order history        |
+
+## Notes
+
+- **Animations** respect `prefers-reduced-motion`.
+- Frontend is served by the backend server from `/frontend`.
