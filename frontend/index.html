@@ -29,44 +29,100 @@
   </nav>
 
   <!-- ===== HERO SECTION ===== -->
-  <section class="hero">
+  <section class="hero" id="hero">
     <!-- Layered animated background -->
     <div class="hero-bg"></div>
     <div class="hero-grid"></div>
     <div class="hero-orb hero-orb-1"></div>
     <div class="hero-orb hero-orb-2"></div>
     <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-accent" aria-hidden="true"></div>
 
     <!-- Floating particles (JS-generated) -->
     <div class="hero-particles" id="heroParticles"></div>
 
-    <!-- Main content -->
-    <div class="hero-content">
-      <div class="hero-eyebrow">
-        <span class="hero-eyebrow-dot"></span>
-        New Arrivals — Up to 40% Off
+    <div class="hero-inner container">
+      <!-- Main content -->
+      <div class="hero-content hero-enter">
+        <div class="hero-eyebrow hero-stagger">
+          <span class="hero-eyebrow-dot"></span>
+          Editorial essentials — curated weekly
+        </div>
+
+        <h1 class="hero-title hero-stagger">
+          <span class="line-1">Premium Picks</span>
+          <span class="line-2">Designed for</span>
+          <span class="line-3">Modern Living</span>
+        </h1>
+
+        <p class="hero-sub hero-stagger">
+          Handpicked essentials across electronics, fashion, and books.
+          Minimal design, premium quality, and fast delivery.
+        </p>
+
+        <div class="hero-actions hero-stagger">
+          <a href="/products.html" class="hero-btn-primary" id="heroShopBtn">
+            Browse Collection
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="/orders.html" class="hero-btn-secondary">
+            Track Orders
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-proof hero-stagger">
+          <div class="hero-proof-item">
+            <span class="hero-proof-dot"></span>
+            Secure checkout
+          </div>
+          <div class="hero-proof-item">
+            <span class="hero-proof-dot"></span>
+            Free shipping over ₹999
+          </div>
+          <div class="hero-proof-item">
+            <span class="hero-proof-dot"></span>
+            30-day returns
+          </div>
+        </div>
       </div>
 
-      <h1 class="hero-title">
-        <span class="line-1">Discover Products</span>
-        <span class="line-2">You'll Love</span>
-        <span class="line-3">— Delivered Fast</span>
-      </h1>
+      <!-- Visual showcase -->
+      <div class="hero-visual hero-stagger" aria-hidden="true">
+        <div class="hero-visual-glow"></div>
+        <div class="hero-card hero-card-1">
+          <div class="hero-card-top">
+            <span class="pill">Limited</span>
+            <span class="pill pill-outline">New</span>
+          </div>
+          <div class="hero-card-title">Noise-Cancel Headphones</div>
+          <div class="hero-card-meta">
+            <span class="meta-dot"></span> Premium audio
+          </div>
+          <div class="hero-card-price"><span class="currency">₹</span>4,999</div>
+        </div>
 
-      <p class="hero-sub">
-        Shop the latest in electronics, fashion, and books.
-        Premium quality, curated with care, delivered to your door.
-      </p>
+        <div class="hero-card hero-card-2">
+          <div class="hero-card-top">
+            <span class="pill pill-blue">Editor’s Pick</span>
+          </div>
+          <div class="hero-card-title">Minimal Leather Wallet</div>
+          <div class="hero-card-meta">
+            <span class="meta-dot"></span> Crafted finish
+          </div>
+          <div class="hero-card-price"><span class="currency">₹</span>899</div>
+        </div>
 
-      <div class="hero-actions">
-        <a href="/products.html" class="hero-btn-primary" id="heroShopBtn">
-          Browse All Products
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="/orders.html" class="hero-btn-secondary">
-          View Orders
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
-        </a>
+        <div class="hero-card hero-card-3">
+          <div class="hero-card-top">
+            <span class="pill pill-gold">Top Rated</span>
+          </div>
+          <div class="hero-card-title">Bestselling Reads</div>
+          <div class="hero-card-meta">
+            <span class="meta-dot"></span> Curated list
+          </div>
+          <div class="hero-card-price"><span class="currency">₹</span>399</div>
+        </div>
       </div>
     </div>
 
@@ -89,51 +145,97 @@
         <div class="hero-stat-label">Support</div>
       </div>
     </div>
+
+    <!-- Scroll indicator -->
+    <a class="scroll-indicator" href="#about" aria-label="Scroll to next section">
+      <span class="scroll-indicator-text">Scroll</span>
+      <span class="scroll-indicator-line" aria-hidden="true"></span>
+    </a>
   </section>
 
-  <!-- ===== TRUST BADGES ===== -->
-  <div class="trust-bar">
-    <div class="trust-bar-inner">
-      <div class="trust-item">
-        <div class="trust-icon">🚚</div>
-        <div class="trust-text">
-          <strong>Free Shipping</strong>
-          <span>On all orders over ₹999</span>
+  <!-- ===== BRAND STORY / ABOUT ===== -->
+  <section class="lux-section" id="about">
+    <div class="container">
+      <div class="lux-two-col">
+        <div class="lux-copy reveal">
+          <span class="lux-kicker">Brand Story</span>
+          <h2 class="lux-h2">A timeless store for modern essentials.</h2>
+          <p class="lux-p">
+            ShopVerse is built around one principle: fewer, better choices.
+            Every product is selected for quality, design integrity, and everyday longevity.
+          </p>
+          <div class="lux-metrics">
+            <div class="lux-metric">
+              <div class="lux-metric-num">Curated</div>
+              <div class="lux-metric-label">Weekly drops</div>
+            </div>
+            <div class="lux-metric">
+              <div class="lux-metric-num">Premium</div>
+              <div class="lux-metric-label">Materials-first</div>
+            </div>
+            <div class="lux-metric">
+              <div class="lux-metric-num">Fast</div>
+              <div class="lux-metric-label">Fulfillment</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">🔒</div>
-        <div class="trust-text">
-          <strong>Secure Payments</strong>
-          <span>100% protected transactions</span>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">↩️</div>
-        <div class="trust-text">
-          <strong>Easy Returns</strong>
-          <span>30-day hassle-free returns</span>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">🎧</div>
-        <div class="trust-text">
-          <strong>24/7 Support</strong>
-          <span>We're always here to help</span>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- ===== CATEGORIES SECTION ===== -->
-  <section class="section">
-    <div class="section-header">
-      <span class="section-tag">Explore</span>
-      <h2>Shop by Category</h2>
-      <p>Curated collections across all your favourite interests</p>
-      <span class="accent-line"></span>
+        <div class="lux-panel reveal" aria-hidden="true">
+          <div class="lux-panel-glow"></div>
+          <div class="lux-panel-card">
+            <div class="lux-panel-title">Designed to feel effortless.</div>
+            <div class="lux-panel-sub">Minimal UI. Maximum confidence.</div>
+            <div class="lux-panel-divider" aria-hidden="true"></div>
+            <div class="lux-panel-list">
+              <div class="lux-panel-item"><span class="dot"></span> Secure checkout</div>
+              <div class="lux-panel-item"><span class="dot"></span> Transparent pricing</div>
+              <div class="lux-panel-item"><span class="dot"></span> Easy returns</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="categories-grid container">
+  </section>
+
+  <!-- ===== FEATURES / SERVICES ===== -->
+  <section class="lux-section" id="features">
+    <div class="container">
+      <div class="lux-header reveal">
+        <span class="lux-kicker">Services</span>
+        <h2 class="lux-h2">Crafted experiences, end to end.</h2>
+        <p class="lux-p">Small details, luxury feel—every interaction is intentional.</p>
+      </div>
+
+      <div class="lux-cards">
+        <div class="lux-card reveal">
+          <div class="lux-card-icon">✦</div>
+          <h3>Curated Collections</h3>
+          <p>Editorial selections across categories—built for clarity and taste.</p>
+        </div>
+        <div class="lux-card reveal">
+          <div class="lux-card-icon">⟡</div>
+          <h3>Premium Packaging</h3>
+          <p>Thoughtful presentation with protective handling from pickup to door.</p>
+        </div>
+        <div class="lux-card reveal">
+          <div class="lux-card-icon">⌁</div>
+          <h3>Concierge Support</h3>
+          <p>Fast, human help—order updates and recommendations when you need them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCT SHOWCASE (Categories) ===== -->
+  <section class="lux-section" id="showcase">
+    <div class="container">
+      <div class="lux-header reveal">
+        <span class="lux-kicker">Showcase</span>
+        <h2 class="lux-h2">Shop by category.</h2>
+        <p class="lux-p">Focused collections—built to browse fast, built to feel premium.</p>
+      </div>
+
+      <div class="categories-grid">
       <a href="/products.html?category=Electronics" class="category-card" id="catElectronics">
         <div class="category-icon">💻</div>
         <div>
@@ -162,27 +264,63 @@
           <p>Cookware, appliances & more</p>
         </div>
       </a>
+      </div>
     </div>
   </section>
 
   <!-- ===== FEATURED PRODUCTS ===== -->
-  <section class="section" style="padding-top: 0;">
-    <div class="section-header">
-      <span class="section-tag">Handpicked</span>
-      <h2>Featured Products</h2>
-      <p>Premium items selected just for you</p>
-      <span class="accent-line"></span>
-    </div>
+  <section class="lux-section" id="products">
+    <div class="container">
+      <div class="lux-header reveal">
+        <span class="lux-kicker">Handpicked</span>
+        <h2 class="lux-h2">Featured products.</h2>
+        <p class="lux-p">Limited selection—high quality, high intent.</p>
+      </div>
     <div class="loading-spinner" id="loadingSpinner">
       <div class="spinner"></div>
       <p>Loading products...</p>
     </div>
-    <div class="products-grid container" id="featuredProducts"></div>
-    <div style="text-align: center; margin-top: 48px;">
-      <a href="/products.html" class="btn btn-outline btn-lg" id="viewAllBtn">
+    <div class="products-grid" id="featuredProducts"></div>
+    <div class="lux-center" style="margin-top: 48px;">
+      <a href="/products.html" class="btn btn-outline btn-lg reveal" id="viewAllBtn">
         View All Products
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
+    </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIAL ===== -->
+  <section class="lux-section" id="testimonial">
+    <div class="container">
+      <div class="lux-quote reveal">
+        <div class="lux-quote-mark" aria-hidden="true">“</div>
+        <p class="lux-quote-text">
+          The best shopping experience I’ve had in a long time—clean design, premium picks,
+          and delivery that feels effortless.
+        </p>
+        <div class="lux-quote-meta">
+          <span class="lux-quote-name">Aarav Mehta</span>
+          <span class="lux-quote-role">Design Lead</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="lux-cta" id="cta">
+    <div class="container">
+      <div class="lux-cta-inner reveal">
+        <div>
+          <div class="lux-kicker">Ready when you are</div>
+          <h2 class="lux-h2">Explore the collection.</h2>
+          <p class="lux-p">Premium essentials—built for daily life, delivered quickly.</p>
+        </div>
+        <div class="lux-cta-actions">
+          <a href="/products.html" class="btn btn-primary btn-lg">Shop Now</a>
+          <a href="/cart.html" class="btn btn-outline btn-lg">View Cart</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -214,6 +352,46 @@
       document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
     });
 
+    // ===== Hero parallax (premium motion) =====
+    (function heroParallax() {
+      const hero = document.getElementById('hero');
+      if (!hero) return;
+      const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+
+      let raf = 0;
+      let targetX = 0;
+      let targetY = 0;
+      let curX = 0;
+      let curY = 0;
+
+      function onMove(e) {
+        const r = hero.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width;
+        const y = (e.clientY - r.top) / r.height;
+        targetX = (x - 0.5) * 2; // -1..1
+        targetY = (y - 0.5) * 2; // -1..1
+        if (!raf) raf = requestAnimationFrame(tick);
+      }
+
+      function tick() {
+        raf = 0;
+        curX += (targetX - curX) * 0.08;
+        curY += (targetY - curY) * 0.08;
+        hero.style.setProperty('--mx', curX.toFixed(3));
+        hero.style.setProperty('--my', curY.toFixed(3));
+        if (Math.abs(targetX - curX) + Math.abs(targetY - curY) > 0.002) {
+          raf = requestAnimationFrame(tick);
+        }
+      }
+
+      hero.addEventListener('pointermove', onMove, { passive: true });
+      hero.addEventListener('pointerleave', () => {
+        targetX = 0; targetY = 0;
+        if (!raf) raf = requestAnimationFrame(tick);
+      }, { passive: true });
+    })();
+
     // ===== Particle generator =====
     function createParticles() {
       const container = document.getElementById('heroParticles');
@@ -229,6 +407,11 @@
       }
     }
     createParticles();
+
+    // ===== Cinematic entrance (stagger) =====
+    window.addEventListener('load', () => {
+      document.body.classList.add('is-loaded');
+    });
 
     // ===== Common Utilities =====
     function getCart() { return JSON.parse(localStorage.getItem('cart') || '[]'); }
@@ -318,16 +501,19 @@
 
     // ===== Intersection Observer for fade-in =====
     const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; } });
-    }, { threshold: 0.1 });
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
 
     updateCartBadge();
     getUserId();
     loadFeatured().then(() => {
-      document.querySelectorAll('.category-card, .trust-item').forEach((el, i) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(24px)';
-        el.style.transition = `opacity 0.5s ease ${i * 0.08}s, transform 0.5s ease ${i * 0.08}s`;
+      document.querySelectorAll('.reveal, .category-card, .product-card').forEach((el) => {
+        el.classList.add('reveal');
         obs.observe(el);
       });
     });
